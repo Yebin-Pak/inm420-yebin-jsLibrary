@@ -1,0 +1,3 @@
+node_modules/
+
+# before commiting, remove the left node_modules by using "git rm -r --cached node_modules"
