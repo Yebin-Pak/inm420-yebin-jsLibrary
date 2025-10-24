@@ -10,8 +10,8 @@
     <!-- external css -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- Glide CDN link -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <!-- Glide css -->
+    <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
 
 
     <title>Document</title>
@@ -30,10 +30,16 @@
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                    <li class="glide__slide">0</li>
-                    <li class="glide__slide">1</li>
-                    <li class="glide__slide">2</li>
+                        <li class="glide__slide">0</li>
+                        <li class="glide__slide">1</li>
+                        <li class="glide__slide">2</li>
                     </ul>
+                </div>
+
+                <!-- arrows -->
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                 </div>
             </div>
         </section>
@@ -49,6 +55,6 @@
     <script src="./assets/js/main.js" defer="true"></script>
 
     <!-- Glide -->
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
 </body>
 </html>
