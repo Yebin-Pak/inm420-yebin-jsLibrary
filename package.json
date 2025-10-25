@@ -13,6 +13,9 @@
     "lite-server": "^2.6.1"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.7.1"
+    "@glidejs/glide": "^3.7.1",
+    "aos": "^2.3.4",
+    "lightbox2": "^2.11.5",
+    "parsleyjs": "^2.9.2"
   }
 }

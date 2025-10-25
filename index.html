@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,173 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
 
     <!-- external css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- Glide css -->
     <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
 
+    <!-- Lightbox2 css -->
+    <link rel="stylesheet" href="./node_modules/lightbox2/dist/css/lightbox.min.css" />
+
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 
     <title>Document</title>
 </head>
+
 <body>
     <!-- header -->
     <header>
+        <nav>
+            <a href="#">
+                <svg id="logo" width="140" height="28" viewBox="0 0 140 28" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_49_227)">
+                        <path d="M36.2348 7.35773V23.4284H33.2076V7.35773H28.2598V4.7854H41.1572V7.35773H36.2348Z"
+                            fill="white" />
+                        <path
+                            d="M43.8665 13.2792C44.1634 12.4812 44.5534 11.8911 45.0367 11.5091C45.5285 11.1271 46.1348 10.936 46.8556 10.936C47.2457 10.936 47.6273 10.9828 48.0004 11.0762C48.382 11.1695 48.7551 11.3054 49.1197 11.4837L48.1276 13.8267C47.8901 13.6569 47.6315 13.5339 47.3516 13.4575C47.0803 13.3726 46.7751 13.3301 46.4359 13.3301C45.5201 13.3301 44.8629 13.6994 44.4644 14.438C44.0658 15.1681 43.8665 16.3991 43.8665 18.131V23.4284H41.1064V11.3308H43.8665V13.2792Z"
+                            fill="white" />
+                        <path
+                            d="M62.0428 23.4284H59.2827V21.8621C58.7908 22.5582 58.2142 23.0761 57.5528 23.4157C56.8999 23.7552 56.1494 23.925 55.3015 23.925C53.597 23.925 52.2531 23.3435 51.2694 22.1804C50.2942 21.0089 49.8066 19.4086 49.8066 17.3796C49.8066 15.4525 50.307 13.8989 51.3076 12.7189C52.3082 11.5303 53.614 10.936 55.2251 10.936C56.2088 10.936 57.0483 11.1441 57.7436 11.5601C58.4474 11.9675 58.9604 12.5576 59.2827 13.3301V11.3563H62.0428V23.4284ZM59.359 17.3541C59.359 16.1062 59.0664 15.1341 58.4813 14.438C57.9047 13.7418 57.0949 13.3938 56.0519 13.3938C55.0089 13.3938 54.1864 13.7546 53.5844 14.4762C52.9907 15.1893 52.694 16.1826 52.694 17.456C52.694 18.7379 52.9823 19.727 53.5589 20.4231C54.1355 21.1192 54.9495 21.4673 56.001 21.4673C56.9931 21.4673 57.7987 21.0896 58.4177 20.334C59.0452 19.5784 59.359 18.5851 59.359 17.3541Z"
+                            fill="white" />
+                        <path
+                            d="M70.094 24.1542L63.7725 11.3562H66.7872L69.4197 17.4305C69.5047 17.6173 69.6064 17.8974 69.7255 18.2709C69.8439 18.6445 69.9672 19.0902 70.094 19.6081C70.179 19.243 70.2765 18.8822 70.3866 18.5256C70.5056 18.1606 70.645 17.7955 70.8066 17.4305L73.4265 11.3562H76.4287L70.094 24.1542Z"
+                            fill="white" />
+                        <path
+                            d="M89.7838 17.7999H80.1424C80.2106 18.929 80.5456 19.8119 81.1475 20.4486C81.7494 21.0768 82.5505 21.3909 83.5514 21.3909C84.4417 21.3909 85.1836 21.2041 85.7771 20.8306C86.3706 20.4571 86.8881 19.8543 87.3291 19.0224L89.6564 20.3212C88.9785 21.5352 88.1391 22.4394 87.1382 23.0337C86.1379 23.6279 84.9634 23.925 83.6149 23.925C81.6818 23.925 80.1424 23.335 78.9979 22.155C77.8533 20.9749 77.2808 19.4001 77.2808 17.4305C77.2808 15.5374 77.8701 13.9838 79.0487 12.7698C80.2357 11.5473 81.7578 10.936 83.6149 10.936C85.5569 10.936 87.0706 11.4921 88.1559 12.6042C89.2412 13.7164 89.7838 15.2742 89.7838 17.2777V17.7999ZM86.9222 15.9407C86.8115 15.0747 86.4813 14.4168 85.9296 13.9669C85.3786 13.5084 84.6242 13.2792 83.6657 13.2792C82.7587 13.2792 82.0294 13.4999 81.4784 13.9414C80.9267 14.3828 80.5408 15.0492 80.3207 15.9407H86.9222Z"
+                            fill="white" />
+                        <path d="M92.7983 23.4284V3.69019H95.5582V23.4284H92.7983Z" fill="white" />
+                        <path d="M99.6411 23.4284V3.69019H102.402V23.4284H99.6411Z" fill="white" />
+                        <path
+                            d="M106.115 6.13516C106.115 5.66823 106.285 5.26497 106.624 4.92539C106.972 4.58581 107.383 4.41602 107.858 4.41602C108.35 4.41602 108.757 4.58156 109.079 4.91266C109.41 5.23526 109.575 5.64276 109.575 6.13516C109.575 6.62755 109.41 7.04354 109.079 7.38313C108.748 7.71422 108.341 7.87977 107.858 7.87977C107.383 7.87977 106.972 7.70998 106.624 7.37039C106.285 7.0223 106.115 6.61056 106.115 6.13516ZM106.484 23.4283V11.3562H109.244V23.4283H106.484Z"
+                            fill="white" />
+                        <path
+                            d="M124.546 23.4284H121.786V21.8621C121.294 22.5582 120.717 23.0761 120.056 23.4157C119.403 23.7552 118.653 23.925 117.805 23.925C116.1 23.925 114.756 23.3435 113.773 22.1804C112.798 21.0089 112.31 19.4086 112.31 17.3796C112.31 15.4525 112.81 13.8989 113.811 12.7189C114.812 11.5303 116.118 10.936 117.728 10.936C118.712 10.936 119.552 11.1441 120.247 11.5601C120.951 11.9675 121.464 12.5576 121.786 13.3301V11.3563H124.546V23.4284ZM121.862 17.3541C121.862 16.1062 121.57 15.1341 120.985 14.438C120.408 13.7418 119.598 13.3938 118.555 13.3938C117.512 13.3938 116.69 13.7546 116.088 14.4762C115.494 15.1893 115.197 16.1826 115.197 17.456C115.197 18.7379 115.486 19.727 116.062 20.4231C116.639 21.1192 117.453 21.4673 118.504 21.4673C119.497 21.4673 120.302 21.0896 120.921 20.334C121.548 19.5784 121.862 18.5851 121.862 17.3541Z"
+                            fill="white" />
+                        <path
+                            d="M128.361 23.4284V11.3563H130.956V13.3301C131.508 12.4981 132.156 11.8911 132.902 11.5091C133.648 11.1271 134.556 10.936 135.625 10.936C136.523 10.936 137.287 11.0804 137.914 11.369C138.55 11.6492 139.046 12.0694 139.402 12.6297C139.614 12.9608 139.767 13.3471 139.86 13.7886C139.953 14.23 140 15.0026 140 16.1062V23.4284H137.214V17.2268C137.214 15.6393 137.019 14.5866 136.629 14.0687C136.247 13.5424 135.565 13.2792 134.581 13.2792C133.937 13.2792 133.361 13.398 132.852 13.6358C132.351 13.8735 131.957 14.2088 131.669 14.6417C131.465 14.9304 131.321 15.3039 131.236 15.7624C131.16 16.2123 131.122 16.9339 131.122 17.9272V23.4284H128.361Z"
+                            fill="white" />
+                        <path
+                            d="M8.64111 19.8916L12.181 23.3812L15.7208 19.8916L12.181 16.402L8.64111 19.8916ZM12.181 2.9561V2.96135C11.1678 2.96135 10.1547 3.34267 9.38281 4.10355L9.37928 4.10006C8.60916 4.86095 8.22237 5.86148 8.22237 6.86202C8.22237 7.86427 8.60743 8.86306 9.37569 9.62043H9.38102L12.181 12.3789L14.9792 9.62043H14.9845C15.7581 8.85779 16.1449 7.85901 16.1449 6.86202H16.1395C16.1395 5.86323 15.7528 4.86445 14.9809 4.10355C14.2037 3.33917 13.1906 2.9561 12.181 2.9561ZM17.7613 21.9032L13.2012 26.3985L12.181 27.4043L11.1607 26.3985L6.60064 21.9032L2.04051 26.3985L0 24.387L10.1422 14.3905L7.34408 11.632L7.34761 11.6285C6.00797 10.3096 5.33904 8.58318 5.33904 6.86202C5.33904 5.13907 6.00797 3.41438 7.34408 2.09725V2.09375C8.68018 0.776629 10.4314 0.117188 12.181 0.117188V0.122435C13.9341 0.122435 15.6871 0.780123 17.0196 2.09375C18.3557 3.41088 19.0229 5.13732 19.0229 6.86375H19.0176C19.0176 8.58844 18.3504 10.3131 17.0161 11.6303L17.0196 11.6337L14.2215 14.3905L24.362 24.387L22.3214 26.3985L17.7613 21.9032Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_49_227">
+                            <rect width="140" height="27.5214" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
 
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+
+            <ul id="profile">
+                <li><button id="login">Login</button></li>
+                <li><button id="signUp">Sign Up</button></li>
+            </ul>
+
+            <div id="burger">
+                <svg id="burger_top" height="3px" width="37.5px" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="0" x2="37.5" y2="0" style="stroke-width:3px" stroke-linecap="round" />
+                </svg>
+                <svg id="burger_middle" height="3px" width="37.5px" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="0" x2="37.5" y2="0" style="stroke-width:3px" stroke-linecap="round" />
+                </svg>
+                <svg id="burger_bottom" height="3px" width="37.5px" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="0" x2="37.5" y2="0" style="stroke-width:3px" stroke-linecap="round" />
+                </svg>
+            </div>
+        </nav>
+
+        <!-- burger nav -->
+        <nav id="burger_nav">
+            <ul id="burger_menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
     </header>
+
 
     <!-- main -->
     <main>
+        <!-- hero -->
+        <section id="hero">
+            <div id="hero_title">
+                <h1>
+                    Start your unforgettable journey with us.
+                </h1>
+                <p>
+                    The best travel for your journey begins now
+                </p>
+            </div>
+
+            <!-- booking form - content block -->
+            <div id="contentBlock" data-aos="fade-left">
+                <form class="complex">
+                    <fieldset data-parsley-state-and-zip="us" data-parsley-validate-if-empty="" data-parsley-errors-container=".error">
+                        <label for="destination">Destination</label>
+                        <input name="destination" required="" data-parsley-type="text" placeholder="Choose your destination">
+
+                        <label for="person">Person</label>
+                        <select name="person" required="">
+                            <option value="" disabled="" selected="" hidden="">1</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+
+                        <label for="checkIn">Check In</label>
+                        <input name="checkIn" required="" type="date" data-parsley-min="01-01-2025" data-parsley-max="12-31-2025">
+
+                        <label for="checkOut">Check Out</label>
+                        <input name="checkOut" required="" type="date" data-parsley-min="01-01-2025" data-parsley-max="12-31-2025">
+                    </fieldset>
+                    <input type="submit" value="Book Now">
+                </form>
+            </div>
+        </section>
 
         <!-- popular destination -->
         <section id="popular_destination">
+            <div id="popular_title" class="title">
+                <h1>
+                    Popular Destination
+                </h1>
+                <svg height="4px" width="288px" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="0" x2="288" y2="0" style="stroke-width:4px" />
+                </svg>
+                <p>
+                    Most popular destinations around the world, from historical places to natural wonders.
+                </p>
+            </div>
+
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                        <li class="glide__slide">0</li>
+                        <li class="glide__slide">
+                            <a href="./assets/images/random_pic.jpg" data-lightbox="image-1" data-title="image-1">
+                                <img src="./assets/images/random_pic.jpg" alt="image-1-thumbnail" width="300px">
+                            </a>
+                        </li>
                         <li class="glide__slide">1</li>
                         <li class="glide__slide">2</li>
                     </ul>
@@ -45,6 +190,7 @@
         </section>
     </main>
 
+
     <!-- footer -->
     <footer>
 
@@ -52,9 +198,20 @@
 
 
     <!-- js -->
-    <script src="./assets/js/main.js" defer="true"></script>
+    <script src="./assets/js/script.js" defer="true"></script>
 
     <!-- Glide -->
     <script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <!-- Lightbox2 -->
+    <script src="./node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Parsley -->
+    <script src="./node_modules/parsleyjs/dist/parsley.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
 </body>
+
 </html>
