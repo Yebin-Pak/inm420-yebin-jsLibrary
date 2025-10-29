@@ -1,3 +1,13 @@
+// burger nav
+let burgerIcon = document.getElementById("burger");
+let burgerNav = document.getElementById("burgerNav");
+
+burgerIcon.addEventListener("click", function(){
+    burgerNav.style.display = "flex";
+    burgerNav.classList.toggle("appear");
+})
+
+
 // glide.js
 new Glide('.glide').mount()
 

@@ -23,7 +23,7 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
 
     <title>Travellian</title>
@@ -101,8 +101,8 @@
         </nav>
 
         <!-- burger nav -->
-        <nav id="burger_nav">
-            <ul id="burger_menu">
+        <nav id="burgerNav">
+            <ul id="burgerMenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Explore</a></li>
                 <li><a href="#">Travel</a></li>
@@ -130,31 +130,39 @@
             <div id="contentBlock" data-aos="fade-left">
                 <form class="complex">
                     <fieldset data-parsley-state-and-zip="us" data-parsley-validate-if-empty="" data-parsley-errors-container=".error">
-                        <label for="destination">Destination</label>
-                        <input name="destination" required="" data-parsley-type="text" placeholder="Choose your destination">
+                        <div class="book_input">
+                            <label for="destination">Destination</label>
+                            <input name="destination" required="" data-parsley-type="text" placeholder="Choose your destination">
+                        </div>
 
-                        <label for="person">Person</label>
-                        <select name="person" required="">
-                            <option value="" disabled="" selected="" hidden="">1</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <div class="book_input">
+                            <label for="person">Person</label>
+                            <select name="person" required="">
+                                <option value="" disabled="" selected="" hidden="">1</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
 
-                        <label for="checkIn">Check In</label>
-                        <input name="checkIn" required="" type="date" data-parsley-min="01-01-2025" data-parsley-max="12-31-2025">
+                        <div class="book_input">
+                            <label for="checkIn">Check In</label>
+                            <input name="checkIn" required="" type="date" data-parsley-min="01-01-2025" data-parsley-max="12-31-2025">
+                        </div>
 
-                        <label for="checkOut">Check Out</label>
-                        <input name="checkOut" required="" type="date" data-parsley-min="01-01-2025" data-parsley-max="12-31-2025">
+                        <div class="book_input">
+                            <label for="checkOut">Check Out</label>
+                            <input name="checkOut" required="" type="date" data-parsley-min="01-01-2025" data-parsley-max="12-31-2025">
+                        </div>
                     </fieldset>
-                    <input type="submit" value="Book Now">
+                    <input id="bookBtn" type="submit" value="Book Now">
                 </form>
             </div>
         </section>
@@ -176,65 +184,73 @@
             <div id="popular_slide" class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                        <li class="glide__slide">
+                        <li class="glide__slide popular_slide">
+                            <a href="./assets/images/berlin.png" data-lightbox="berlin" data-title="Berlin, Germany">
+                                <div class="overlay">
+                                    <img class="slide_img slide_img_berlin" src="./assets/images/berlin.png" alt="berlin thumbnail">
+                                </div>
+                            </a>
                             <div>
                                 <h2>Monument of Berlin</h2>
                                 <div>
-                                    <svg id="popular_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
                                         <path class="st0" d="M21.09,14.06c0,3.88-3.15,7.03-7.03,7.03s-7.03-3.15-7.03-7.03,3.15-7.03,7.03-7.03,7.03,3.15,7.03,7.03ZM0,14.06c0,6.95,5.3,14.48,9.98,21,1.11,1.55,2.18,3.03,3.1,4.42.22.33.58.52.97.52s.76-.2.98-.52c.93-1.39,1.99-2.87,3.1-4.42,4.68-6.51,9.98-14.05,9.98-21C28.12,6.31,21.82,0,14.06,0S0,6.31,0,14.06Z"/>
                                         <circle class="st0" cx="14.06" cy="14.06" r="4.69"/>
                                     </svg>
                                     <p>Berlin, Germany</p>
                                 </div>
                             </div>
-                            <a href="./assets/images/berlin.png" data-lightbox="berlin" data-title="Berlin, Germany">
-                                <img src="./assets/images/berlin.png" alt="berlin">
-                            </a>
                         </li>
-                        <li class="glide__slide">
+                        <li class="glide__slide popular_slide">
+                            <a href="./assets/images/london.png" data-lightbox="london" data-title="London, United Kingdom">
+                                <div class="overlay">
+                                    <img class="slide_img slide_img_london" src="./assets/images/london.png" alt="london thumbnail">
+                                </div>
+                            </a>
                             <div>
                                 <h2>Millennium Bridge</h2>
                                 <div>
-                                    <svg id="popular_2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
                                         <path class="st0" d="M21.09,14.06c0,3.88-3.15,7.03-7.03,7.03s-7.03-3.15-7.03-7.03,3.15-7.03,7.03-7.03,7.03,3.15,7.03,7.03ZM0,14.06c0,6.95,5.3,14.48,9.98,21,1.11,1.55,2.18,3.03,3.1,4.42.22.33.58.52.97.52s.76-.2.98-.52c.93-1.39,1.99-2.87,3.1-4.42,4.68-6.51,9.98-14.05,9.98-21C28.12,6.31,21.82,0,14.06,0S0,6.31,0,14.06Z"/>
                                         <circle class="st0" cx="14.06" cy="14.06" r="4.69"/>
                                     </svg>
                                     <p>London, United Kingdom</p>
                                 </div>
-                            </div>
-                            <a href="./assets/images/london.png" data-lightbox="london" data-title="London, United Kingdom">
-                                <img src="./assets/images/london.png" alt="london">
-                            </a>
+                            </div>                        
                         </li>
-                        <li class="glide__slide">
+                        <li class="glide__slide popular_slide">
+                            <a href="./assets/images/venice.png" data-lightbox="venice" data-title="Venice, Italy">
+                                <div class="overlay">
+                                    <img class="slide_img slide_img_venice" src="./assets/images/venice.png" alt="venice thumbnail">
+                                </div>
+                            </a>
                             <div>
                                 <h2>Rialto Bridge</h2>
                                 <div>
-                                    <svg id="popular_3" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
                                         <path class="st0" d="M21.09,14.06c0,3.88-3.15,7.03-7.03,7.03s-7.03-3.15-7.03-7.03,3.15-7.03,7.03-7.03,7.03,3.15,7.03,7.03ZM0,14.06c0,6.95,5.3,14.48,9.98,21,1.11,1.55,2.18,3.03,3.1,4.42.22.33.58.52.97.52s.76-.2.98-.52c.93-1.39,1.99-2.87,3.1-4.42,4.68-6.51,9.98-14.05,9.98-21C28.12,6.31,21.82,0,14.06,0S0,6.31,0,14.06Z"/>
                                         <circle class="st0" cx="14.06" cy="14.06" r="4.69"/>
                                     </svg>
                                     <p>Venice, Italy</p>
                                 </div>
-                            </div>
-                            <a href="./assets/images/venice.png" data-lightbox="venice" data-title="Venice, Italy">
-                                <img src="./assets/images/venice.png" alt="venice">
-                            </a>
+                            </div>                            
                         </li>
-                        <li class="glide__slide">
+                        <li class="glide__slide popular_slide">
+                            <a href="./assets/images/lisbon.png" data-lightbox="lisbon" data-title="Lisbon, Portugal">
+                                <div class="overlay">
+                                    <img class="slide_img slide_img_lisbon" src="./assets/images/lisbon.png" alt="lisbon thumbnail">
+                                </div>
+                            </a>
                             <div>
                                 <h2>Sea of Orange Tiles</h2>
                                 <div>
-                                    <svg id="popular_4" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28.12 40">
                                         <path class="st0" d="M21.09,14.06c0,3.88-3.15,7.03-7.03,7.03s-7.03-3.15-7.03-7.03,3.15-7.03,7.03-7.03,7.03,3.15,7.03,7.03ZM0,14.06c0,6.95,5.3,14.48,9.98,21,1.11,1.55,2.18,3.03,3.1,4.42.22.33.58.52.97.52s.76-.2.98-.52c.93-1.39,1.99-2.87,3.1-4.42,4.68-6.51,9.98-14.05,9.98-21C28.12,6.31,21.82,0,14.06,0S0,6.31,0,14.06Z"/>
                                         <circle class="st0" cx="14.06" cy="14.06" r="4.69"/>
                                     </svg>
                                     <p>Lisbon, Portugal</p>
                                 </div>
-                            </div>
-                            <a href="./assets/images/lisbon.png" data-lightbox="lisbon" data-title="Lisbon, Portugal">
-                                <img src="./assets/images/lisbon.png" alt="lisbon">
-                            </a>
+                            </div>                            
                         </li>
                     </ul>
                 </div>
@@ -272,7 +288,7 @@
             <div id="review_slide" class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                        <li class="glide__slide">
+                        <li class="glide__slider review_slide">
                             <img src="./assets/images/reviewer_1.png" alt="reviewer_1">
                             <p>
                                 But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.
@@ -299,7 +315,7 @@
                                 <span>Accountant</span>
                             </div>
                         </li>
-                        <li class="glide__slide">
+                        <li class="glide__slide review_slide">
                             <img src="./assets/images/reviewer_2.png" alt="reviewer_2">
                             <p>
                                 But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.
@@ -326,7 +342,7 @@
                                 <span>Journalist, HWO News</span>
                             </div>
                         </li>
-                        <li class="glide__slide">
+                        <li class="glide__slide review_slide">
                             <img src="./assets/images/reviewer_3.png" alt="reviewer_3">
                             <p>
                                 But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness.
