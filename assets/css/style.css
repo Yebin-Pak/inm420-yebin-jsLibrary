@@ -22,6 +22,7 @@ header > nav {
 
 #logo {
     width: 140px;
+    height: 28px;
     fill: white;
 }
 
@@ -215,8 +216,7 @@ input, select {
     color: white;
 }
 
-#popular_slide > div,
-#review_slide > div {
+#popular_slide > div {
     padding: 10px 0;
 }
 
@@ -362,6 +362,200 @@ h3 {
 
 
 /* desktop version */
-@media only screen and (min-width: 390px) {
+@media only screen and (min-width: 400px) {
     
+    /* header */
+    header {
+        padding: 0 5%;
+    }
+
+    header > nav {
+        height: 128px;
+    }
+
+    #logo {
+        width: 234px;
+        height: 46px;
+    }
+
+    #menu {
+        display: flex;
+        gap: 32px;
+
+        font-family: "Rubik", sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+    }
+
+    #menu a {
+        color: white;
+    }
+
+    #menu a.highlight {
+        font-weight: 400;
+        text-decoration: underline 3px #FF7757;
+    }
+
+    #profile {
+        display: flex;
+        align-items: center;
+        gap: 36px;       
+    }
+
+    #login,
+    #signUp {
+        font-family: "Rubik", sans-serif;
+        font-weight: 200;
+        font-size: 20px;
+        color: white;
+    }
+
+    #login {
+        border: none;
+        background: none;
+    }
+
+    #signUp {
+        width: 134px;
+        height: 64px;
+        border: none;
+        border-radius: 12px;
+        background-color: #FF7757;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #burgerNav {
+        display: none;
+    }
+
+
+    /* hero */
+    #hero {
+        height: 1200px;
+        margin-top: -128px;
+        background-size: 100%;
+        background-position: left 0 bottom 7%;
+    }
+
+    #hero_title {
+        width: 50%;
+        padding: 13% 5%;
+
+        gap: 24px;
+    }
+
+    h1 {
+        line-height: 95px;
+        font-size: 84px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+
+    /* booking form - content block */
+    #contentBlock {
+        width: 80%;
+        height: 216px;
+        border-radius: 0 20px 20px 0;
+
+        position: absolute;
+        left: 0;
+    }
+
+    #contentBlock > form {
+        padding: 74px 5vw;
+    }
+
+    #contentBlock > form > fieldset {
+        flex-direction: row;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input, select {
+        width: 230px;
+        height: 37px;
+
+        font-size: 20px;
+    }
+
+    #bookBtn {
+        width: 20%;
+        height: 100%;
+        border-radius: 0 20px 20px 0;
+
+        left: auto;
+        right: 0;
+    }
+
+
+    /* titles */
+    .title {
+        padding: 100px 0;
+
+        gap: 32px;
+    }
+
+
+    /* popular destination */
+    #popular_destination {
+        width: 95%;
+        padding: 0 0 10% 5%;
+    }
+
+    #popular_slide ul {
+        height: 660px;
+    }
+
+    .popular_slide {
+        width: 100%;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 660px;
+        border-radius: 26px;
+
+        overflow: hidden;
+    }
+
+    .popular_slide > div > div {
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 28px; 
+    }
+
+    .popular_slide p {
+        font-size: 24px;
+    }
+
+    .slide_img {
+        height: 660px;
+    }
+
+    .glide__arrows {
+        margin: 3% 5% 3% 0;
+        
+        display: flex;
+        justify-content: end;
+        gap: 40px;
+    }
+
+    /* footer */
+    footer {
+        padding: 5%;
+
+        flex-direction: row;
+        justify-content: space-between;
+        gap: auto;
+    }
 }
